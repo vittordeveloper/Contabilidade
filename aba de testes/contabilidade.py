@@ -1,3 +1,5 @@
+# ESSE ARQUIVO É APENAS PARA TESTS, O ARQUIVO AONDE ENCONTRA O PROJETO É EM CONTABILIDADE!
+
 from openpyxl import load_workbook
 import pyautogui
 
