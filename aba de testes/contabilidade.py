@@ -1,3 +1,5 @@
+# ESSE ARQUIVO É APENAS PARA TESTS, O ARQUIVO AONDE ENCONTRA O PROJETO É EM CONTABILIDADE!
+
 from openpyxl import load_workbook
 import pyautogui
 
@@ -12,5 +14,3 @@ for linha in pagina1.iter_rows(min_row=2, values_only=True):
     print(linha[1])
     # Quantidade
     print(linha[2])
-    # Data
-    print(linha[3])
