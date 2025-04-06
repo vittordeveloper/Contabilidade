@@ -1,7 +1,5 @@
 # (IMPORTANTE):
 # PARA O USO ADEQUADO PASSE ESSE SCRIPT PARA OUTRO LOCAL, PODE SER UMA NOVA ABA NO VSCODE E CLIQUE PARA EXECUTAR!
-# 
-
 
 from openpyxl import load_workbook
 import pyautogui
