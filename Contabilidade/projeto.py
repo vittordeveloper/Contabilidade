@@ -10,9 +10,10 @@ def salvando():
     data_valor = data.get()
     
     if not nome_valor or not produto_valor or not quantidade_valor or not data_valor:
-        salvando_limpeza['text'] = 'Preencha todos os dados, por favor!'
-        salvando_limpeza.place(x=175, y=107, anchor='center')
-        Janela.after(2500, salvando_limpeza.place_forget)
+        mensagem_limpeza.place_forget()
+        mensagem_salvando['text'] = 'Preencha todos os dados, por favor!'
+        mensagem_salvando.place(x=175, y=107, anchor='center')
+        Janela.after(2500, mensagem_salvando.place_forget)
         return
     
     # Numerar as fichas
@@ -59,13 +60,14 @@ def limpar():
         with open('dados.txt', 'w', encoding='utf-8') as arquivo:
             pass
     except:
-        salvando_limpeza['text'] = 'O arquivo não existe!'
+        mensagem_limpeza['text'] = 'O arquivo não existe!'
        
     else:
-        salvando_limpeza['text'] = 'Os dados foram apagados!'
+        mensagem_salvando.place_forget()
+        mensagem_limpeza['text'] = 'Os dados foram apagados!'
 
-    salvando_limpeza.place(x=175, y=107, anchor='center')
-    Janela.after(2500, salvando_limpeza.place_forget)
+    mensagem_limpeza.place(x=175, y=107, anchor='center')
+    Janela.after(2500, mensagem_limpeza.place_forget)
 
 
 
@@ -115,7 +117,8 @@ limpar_botao = Button(Janela, text='Limpar', width=40, height=1, background='red
 limpar_botao.place(x=175, y=165, anchor='center')
 
 # Salvando/Limpeza
-salvando_limpeza = Label(Janela, text='', background='white')
+mensagem_limpeza = Label(Janela, text='', background='white')
+mensagem_salvando = Label(Janela, text='', background='white')
 
 # Loop (para se manter aberto)
 Janela = mainloop()
