@@ -14,3 +14,5 @@ for linha in pagina1.iter_rows(min_row=2, values_only=True):
     print(linha[1])
     # Quantidade
     print(linha[2])
+    # Data
+    print(linha[3])

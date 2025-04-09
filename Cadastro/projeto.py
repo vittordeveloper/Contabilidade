@@ -69,8 +69,6 @@ def limpar():
     mensagem_limpeza.place(x=175, y=107, anchor='center')
     Janela.after(2500, mensagem_limpeza.place_forget)
 
-
-
 # Exibição
 Janela = Tk()
 
